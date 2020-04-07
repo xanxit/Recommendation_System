@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Documentation for fontawesome-builder</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="fontawesome-builder is a library to help you render the fontawesome library using PHP">
+    <meta name="author" content="Toskas Dimitrios">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-twilight.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/floating.labels.min.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+</head> 
+
+<body class="landing-page">   
+	
+	<!-- GITHUB BUTTON JS -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+     
+    <!--FACEBOOK LIKE BUTTON JAVASCRIPT SDK-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <div class="page-wrapper">
+        
+        <!-- ******Header****** -->
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <span class="text-highlight">floating</span>-<span class="text-bold">labels</span>
+                    </h1>
+                </div><!--//branding-->
+                <div class="tagline">
+                    <p>To install the floating-labels plugin either download the package from github and use the files within the dist folder or use npm</p>
+                    <pre class="language-html"><code>npm i --save bootstrap-floating-labels</code></pre>
+                </div><!--//tagline-->
+                <a class="btn btn-blue btn-cta" href="mailto:dimitris@toskas.gr" >
+                    <i class="far fa-envelope"></i>Contact me
+                </a>
+                <div class="social-container">
+	                <!-- Replace with your Github Button -->
+	                <div class="github-btn mb-2">
+						<a class="github-button" href="https://github.com/ditoskas/floating-labels" data-size="large" aria-label="Star ditoskas/floating-labels on GitHub">Star</a>
+                        <a class="github-button" href="https://github.com/ditoskas/floating-labels/releases" data-size="large" aria-label="Download">Download</a>
+	                </div>
+	                <!-- Replace with your Twitter Button -->
+                    <div class="twitter-tweet">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-text="FloatingLabels - A FREE #jQuery plugin for floating labels">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div><!--//tweet-->
+                    <!-- Replace with your Facebook Button -->
+                    <div class="fb-like" data-href="https://toskas.gr" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                 </div><!--//social-container-->
+            </div><!--//container-->
+        </header><!--//header-->
+        <section class="cards-section">
+            <div class="container">
+                <h2 class="title">Example of Floating Labels Bootstrap Form</h2>
+                <div class="intro">
+                    <form>
+                        <div class="form-group floating-control-group">
+                            <label for="txtFloatingUsername">Username</label>
+                            <input type="email" class="form-control" id="txtFloatingUsername" placeholder="Enter Username">
+                        </div>
+                        <div class="form-group floating-control-group">
+                            <label for="txtFloatingPassword">Password</label>
+                            <input type="password" class="form-control" id="txtFloatingPassword" placeholder="Enter Password">
+                        </div>
+                        <div class="form-group floating-control-group">
+                            <label for="txtFloatingComments">Comments</label>
+                            <textarea class="form-control" id="txtFloatingComments" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div><!--//intro-->
+                <h2 class="title">Use</h2>
+                <div class="intro">
+                    <p>To transform a normal bootstrap form-group container to floating labels add the class floating-control-group on the div container</p>
+                    <pre class="language-html"><code>
+&lt;div class="form-group floating-control-group">
+    &lt;label for="txtFloatingUsername">Username&lt;/label>
+    &lt;input type="email" class="form-control" id="txtFloatingUsername" placeholder="Enter Username">
+&lt;/div>
+&lt;div class="form-group floating-control-group">
+    &lt;label for="txtFloatingPassword">Password&lt;/label>
+    &lt;input type="password" class="form-control" id="txtFloatingPassword" placeholder="Enter Password">
+&lt;/div>
+&lt;div class="form-group floating-control-group">
+    &lt;label for="txtFloatingComments">Comments&lt;/label>
+    &lt;textarea class="form-control" id="txtFloatingComments" rows="3">&lt;/textarea>
+&lt;/div>
+&lt;button type="submit" class="btn btn-primary">Submit&lt;/button>
+                                            </code></pre>
+                    <p>If you want to use it manually then select the div container using jQuery and call the floatingLabel constructor</p>
+                    <pre class="language-javascript"><code>$('.form-group').floatingLabel();</code></pre>
+                </div><!--//intro-->
+            </div><!--//container-->
+        </section><!--//cards-section-->
+        <section class="cards-section">
+            <div class="container">
+                <h2 class="title">Options</h2>
+                <div class="intro">
+                    You can customize the class that will be used for the floating labels by using either the below data attributes on the div containers
+                    <ul>
+                        <li>data-floating-label-class: Default class that will be used on the label</li>
+                        <li>data-floating-label-on-class: Default class that will be used on the label when is floated</li>
+                        <li>data-floating-input-class: Default class that will be used on the input field</li>
+                        <li>data-floating-style: Default style class that will be used for coloring</li>
+                    </ul>
+                    <pre class="language-html"><code>
+&lt;div class="form-group floating-control-group" data-floating-label-class="alternative-class">
+    &lt;label for="txtFloatingUsername">Username&lt;/label>
+    &lt;input type="email" class="form-control" id="txtFloatingUsername" placeholder="Enter Username">
+&lt;/div>
+&lt;div class="form-group floating-control-group" data-floating-label-on-class="alternative-floated-class">
+    &lt;label for="txtFloatingPassword">Password&lt;/label>
+    &lt;input type="password" class="form-control" id="txtFloatingPassword" placeholder="Enter Password">
+&lt;/div>
+&lt;div class="form-group floating-control-group" data-floating-input-class="alternative-input-class">
+    &lt;label for="txtFloatingComments">Comments&lt;/label>
+    &lt;textarea class="form-control" id="txtFloatingComments" rows="3">&lt;/textarea>
+&lt;/div>
+&lt;button type="submit" class="btn btn-primary">Submit&lt;/button>
+                                            </code></pre>
+                    or by adding options on the js constructor
+                    <pre class="language-javascript"><code>
+var options = {
+    floatingLabelClass: 'alternative-floating-label',
+    floatingLabelOnClass: 'alternative-floating-label-on',
+    floatingInputClass: 'alternative-floating-input',
+    floatingStyle: 'primary'
+};
+$('.form-group').floatingLabel(options);
+                    </code></pre>
+                </div><!--//intro-->
+            </div><!--//container-->
+        </section><!--//cards-section-->
+    </div><!--//page-wrapper-->
+
+    <footer class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    <!-- Main Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js" crossorigin="anonymous"></script>
+    <script src="assets/floating.labels.min.js" ></script>
+</body>
+</html> 
+
